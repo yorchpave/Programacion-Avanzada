@@ -39,7 +39,7 @@ int main()
     int len = 4;
     int target = 9;
     int *result = getIndexes(nums, len, target);
-    printf("");
+    printf(" ");
     if (result != NULL && (nums[result[0]] + nums[result[1]] == target))
     {
         printf("Works!!\n");
