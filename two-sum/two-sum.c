@@ -1,35 +1,19 @@
+// Problem from LeetCode at https://leetcode.com/problems/two-sum/description/
+
 #include <stdlib.h>
-#include "two-sum.h"
+#include "two_sum.h"
 
-int *getIndexes(int *nums, int len, int target)
-{
+int * two_sum (int * nums, int num_size, int target) {
+    // You have to check each combination in case of negative numbers.
     int i, j;
-    int candidate;
-    int complement;
-    int *result = (int *)calloc(2, sizeof(int));
-
-    for (i = 0; i < len - 1; i++)
-    {
-        if (nums[i] >= target)
-        {
-            continue;
-        }
-        candidate = nums[i];
-        complement = target - candidate;
-        for (j = i + 1; j < len; j++)
-        {
-            if (nums[j] == complement)
-            {
-                break;
+    int * result = (int *) calloc(2, sizeof(int));
+    for (i = 0; i < num_size - 1; i++) {
+        for (j = i + 1; j < num_size; j++) {
+            if (nums[i] + nums[j] == target) {
+                result[0] = i; result[1] = j;
+                return result;
             }
-        }
-        if (nums[i] + nums[j] == target)
-        {
-            result[0] = i;
-            result[1] = j;
-            return result;
         }
     }
     return NULL;
 }
-
