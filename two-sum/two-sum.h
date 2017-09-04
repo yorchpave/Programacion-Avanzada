@@ -1,2 +1,1 @@
-
-int *getIndexes(int *, int , int);
+int * two_sum (int *, int, int);
