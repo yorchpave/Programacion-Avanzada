@@ -1,2 +1,2 @@
 # Reverse String
-![Reverse String image](https://github.com/yorchpave/Programacion-Avanzada/blob/master/mini_proyecto/reverseString.png)
+![reverse string image](https://github.com/yorchpave/Programacion-Avanzada/tree/master/mini_proyecto_1/images)
