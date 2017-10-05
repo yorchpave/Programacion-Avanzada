@@ -15,7 +15,7 @@ int can_be_formed(char * word, char * row) {
             }
         }
     }
-    // printf("Word: %s, Copy_word: %s\n", word, copy_word);
+    
     for (i = 0; copy_word[i] != '\0'; i++) {
         if(copy_word[i] != ' ' && copy_word[i] != '*') {
             free(copy_word);
