@@ -2,17 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include "keyboard_row.h"
 
-/** can_be_formed
-  * Receives two char * (strings) and returns whether the first char * can be
-  * formed with the letters in the second char *, repetition is allowed.
-  * @param:
-  *  word: the message that was formed
-  *  magazine: the letters that are available
-  * @return:
-  *  int: 1 | 0
-*/
 int can_be_formed(char * word, char * row) {
     char * copy_word;
     copy_word = strdup(word);
@@ -36,21 +26,6 @@ int can_be_formed(char * word, char * row) {
     return 1;
 }
 
-/** find_words
-  * Receives an array of char * (strings) and a pointer to the size of the
-  * result. It returns the words that can be formed using only a row of the
-  * standard US Keyboard layout.
-  * Notes:
-  *   - You may use one character in the keyboard more than once.
-  *   - You may assume the input string will only contain letters of alphabet.
-
-  * @param:
-  *  words: the input array of char *
-  *  words_size: the size of the char ** words
-  *  return_size: the direction in memory in which to save the result's size.
-  * @return:
-  *  char **: the words that can be formed.
-*/
 char** find_words (char** words, int words_size, int* return_size) {
     if (words == NULL || return_size == NULL) {
         return NULL;
@@ -74,8 +49,6 @@ char** find_words (char** words, int words_size, int* return_size) {
     for (i = 0; i < words_size; i++) {
         first_char = tolower(words[i][0]);
 
-        // Traverse the three rows at the same time to see which row matches
-        // the first character.
         for (j = 0; j < size_first; j++) {
             if (j < size_second) {
                 if (first_char == second_row[j]) {
