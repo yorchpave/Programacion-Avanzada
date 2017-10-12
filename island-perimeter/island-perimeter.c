@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "island_perimeter.h"
+#include "island-perimeter.h"
 
 int island_perimeter(int ** island, int row_size, int col_size) {
 	int perimeter = 0, i, j, temp_perimeter;
