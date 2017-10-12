@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "minunit.h"
-#include "island_perimeter.h"
+#include "island-perimeter.h"
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
