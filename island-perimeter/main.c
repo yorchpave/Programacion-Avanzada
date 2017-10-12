@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "island_perimeter.h"
+#include "island-perimeter.h"
 
 #define print_debug(msg) do { \
 	char * value = getenv("ISLAND_DEBUG");\
