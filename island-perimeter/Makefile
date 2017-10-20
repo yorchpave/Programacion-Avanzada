@@ -1,27 +1,28 @@
 LIB := $(shell find ./lib -name '*.o')
 all:
-	 gcc -c island_perimeter.c
+	 gcc -c island-perimeter.c
 	 gcc -c main.c
-	 gcc -o island_perimeter.exe island_perimeter.o main.o $(LIB)
+	 gcc -o island-perimeter.exe island-perimeter.o main.o $(LIB)
 
-test_island_perimeter: clean
-	 gcc -c island_perimeter.c
-	 gcc -c test_island_perimeter.c
-	 gcc -o test_island_perimeter.exe island_perimeter.o test_island_perimeter.o
-	 ./test_island_perimeter.exe
+test_island-perimeter: clean
+	 gcc -c island-perimeter.c
+	 gcc -c test_island-perimeter.c
+	 gcc -o test_island-perimeter.exe island-perimeter.o test_island-perimeter.o
+	 ./test_island-perimeter.exe
 
-test:	 test_island_perimeter
+test:	 test_island-perimeter
 
 clean:
 	 rm *.out *.o *.exe || exit 0
 
-island_perimeter: clean
-	 gcc -c island_perimeter.c
+island-perimeter: clean
+	 gcc -c island-perimeter.c
 	 gcc -c main.c
-	 gcc -o island_perimeter.exe island_perimeter.o main.o $(LIB)
+	 gcc -o island-perimeter.exe island-perimeter.o main.o $(LIB)
 
-run: island_perimeter
-	 ./island_perimeter.exe
+run: island-perimeter
+	 ./island-perimeter.exe
 
-runtest: island_perimeter
-./integrationtest.tcl ./island_perimeter.exe
+runtest: island-perimeter
+	 ./integrationtest.tcl ./island-perimeter.exe
+
